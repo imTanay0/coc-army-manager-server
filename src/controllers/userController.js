@@ -60,7 +60,7 @@ export const login = async (req, res) => {
         .json({ success: false, message: "Incorrect email or password" });
     }
 
-    sendToken(res, user, `Welcome back ${user.name}`, 201);
+    sendToken(res, user, `Welcome back ${user.username}`, 201);
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
